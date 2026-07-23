@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kcd-lima-app-dev
+  annotations:
+    argocd/app-name: kcd-lima-app-dev
+    argocd/app-namespace: argocd
+    argocd/instance-name: kind-local
+    backstage.io/kubernetes-id: kcd-lima-app
+    backstage.io/kubernetes-namespace: kcd-lima
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: fmenesesg/kcd-lima-app
+  tags:
+    - java
+    - quarkus
+    - maven
+    - kcd-lima
+  links:
+    - url: https://github.com/fmenesesg/kcd-lima-app
+      title: Source repository
+      icon: github
+spec:
+  type: service
+  lifecycle: production
+  owner: 
